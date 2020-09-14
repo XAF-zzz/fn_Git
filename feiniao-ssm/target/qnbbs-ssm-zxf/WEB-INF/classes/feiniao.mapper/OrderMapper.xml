@@ -3,5 +3,8 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kgc.feiniao.mapper.OrderMapper">
-
+    <insert id="insertOrder">
+        insert into `order`(ouid,ocreate,ocost,ostate)
+        values(#{order.ouid},#{order.ocreate},#{order.ocost},#{order.ostate});
+    </insert>
 </mapper>

@@ -41,7 +41,7 @@ public class AlipayConfig {
 	public static String charset = "utf-8";
 	
 	// 支付宝网关
-	public static String gatewayUrl = " https://openapi.alipaydev.com/gateway.do";
+	public static String gatewayUrl = "https://openapi.alipaydev.com/gateway.do";
 	
 	// 支付宝网关
 	public static String log_path = "C:\\";
