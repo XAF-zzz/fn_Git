@@ -1,0 +1,317 @@
+ .mod_profile{
+	height: 380px;
+	background: url(../img/背景.jpg);
+	padding: 0px;
+	padding-top: 65px;
+    text-align: center;
+    color: #fff;
+}
+li{
+	list-style: none;
+}
+.mod_tab__item{
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	height: 30px;
+	margin-right: 30px;
+	font-size: 15px;
+	font-weight: 400;
+}
+li a{
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+}
+.mod_user_statistic{
+	padding-left: 0px;
+}
+.user_statistic__item {
+    display: inline-block;
+    width: auto;
+    text-align: center;
+    padding: 0 10px;
+}
+.user_statistic__item--last{
+	border-left: solid 1px #24313d;
+}
+.profile__cover{
+	width: 100px;
+	height: 100px;
+	border-radius:100%;
+}
+.section_inner_pic{
+	height: 315px;
+}
+.profile__name{
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 64px;
+	margin-right: 4px;
+}
+h1{
+	margin: 0px;
+	padding: 0px;
+}
+
+/**
+ * 
+ 
+ */
+.mod_songlist_toolbar {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 0;
+}
+.mod_songlist_toolbar > .mod_btn_green:hover{
+	color: #000000;
+	background-color: #00c500;
+}
+.mod_songlist_toolbar > .mod_btn:hover{
+	background-color: #d4d4d4;
+}
+.mod_btn , .mod_btn_green{
+	text-decoration: none;
+	color: #000000;
+}
+.mod_btn_green {
+    background-color: #31c27c;
+    color: #fff;
+}
+.mod_btn, .mod_btn_green {
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+	width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+	text-align: center;
+	border: 1px solid #999;
+}
+/* .profile_nav {
+    position: absolute;
+    top: -56px;
+    left: 0;
+    margin-bottom: 0;
+    width: 80%;
+} */
+.profile_nav{
+	margin-left: 150px;
+}
+.mod_tab {
+    margin-bottom: -20px;
+    overflow: hidden;
+    border-bottom: 0 none;
+}
+.mod_tab__item {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+#like_box{
+	margin: 30px 150px 0px 150px;
+}
+.mod_songlist{
+	margin-bottom: 60px;
+	font-size: 14px;
+	overflow: hidden;
+	/* line-height: 1.5; */
+}
+.songlist__header {
+	overflow: hidden;
+	padding-left: 10px;
+	color: #999;
+}
+.songlist__header_name{
+	width: 600px;
+	float: left;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+.songlist__header_author{
+	float: left;
+	margin: 0;
+	padding: 0;
+	padding-left: 15px;
+	width: 335px;
+}
+.songlist__header_time{
+	/* position: absolute; */
+	float: left;
+	top: 0;
+	right: 38px;
+	width: 50px;
+	margin: 0;
+	padding: 0;
+}
+.songlist_songnname{
+	width: 600px;
+	position: relative;
+	height: 80px;
+	line-height: 80px;
+	float: left;
+}
+.songlist_songnname > div{
+	float: left;
+}
+
+.singer_name , .js_song{
+	font-size: 15px;
+}
+.mod_songlist_toolbar{
+	margin-top: 30px;
+}
+.songlist_list{
+	padding-left: 10px;
+}
+
+
+
+
+/* 榜单工具栏*/
+
+#js_all_play , #js_all_fav , #js_all_down , #js_into_comment {
+	width: 15px;
+	height: 15px;
+	vertical-align: middle;
+	margin-right:8px ;
+}
+.mod_list_menu{
+	margin-left: 380px;
+	display: none;
+}
+
+.mod_list_menu a{
+	float: left;
+}
+.list_menu__play{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/播放键.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+
+.list_menu__down{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/VIP下载.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+.list_menu__share{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/分享.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+.list_menu__play:hover{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/播放健1.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+
+.list_menu__down:hover{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/VIP下载1.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+.list_menu__share:hover{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/分享1.png) no-repeat -2.5px 10px;
+	background-size: 40px 40px ;
+}
+
+
+.songlist_artist{
+	float: left;
+	width: 335px;
+	height: 80px;
+	line-height: 80px;
+	padding-left: 15px;
+}
+.songlist_time{
+	height: 80px;
+	line-height: 80px;
+}
+.songlist__delete{
+	height: 80px;
+	line-height: 80px;
+}
+.list_menu__delete{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/删除.png) no-repeat 5px 20px;
+	background-size: 40px 40px ;
+}
+.list_menu__delete:hover{
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background: url(../img/删除11.png) no-repeat 5px 20px;
+	background-size: 40px 40px ;
+}
+/* .delete_pic hover{
+	background: url(../img/删%20除(1).png);
+	display:inline-block ;
+	height: 80px;
+	width: 50px;
+	background-size: 40px 40spx ;
+} */
+
+/*关注*/
+.singer_list__pic{
+	border-radius : 100% ;
+	width : 140px;
+	height : 140px;
+}
+.mod_tab{
+	
+}
+#focus_box{
+	margin-top: 30px;
+	margin-left: 150px;
+}
+.singer_list__item{
+	display: inline-block;
+	float: left;
+	width: 20%;
+	margin-bottom: 20px;
+	overflow: hidden;
+	text-align: center;
+	
+	
+}
+.mod_tab__current{
+	height: 56px;
+	line-height: 56px;
+}
+.js_singer{
+	font-size: 14px;
+	font-weight: 400;
+}
+.mod_singer_list_fans{
+	overflow: hidden;
+	margin-top: 60px;
+}
+.singer_list__pic:after,.mod_tab:after,.singer_list__item:after,.singer_list__list:after{
+	content: '';
+	display: block;
+	clear: both;
+}

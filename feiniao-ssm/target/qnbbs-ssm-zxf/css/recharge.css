@@ -1,0 +1,250 @@
+footer{
+	width: 100%;
+	height: 340px;
+	background-color: #333;
+	position: absolute;
+	top: 800px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.footer_nav_a{
+	color: lightgrey;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	border-bottom: 1px solid grey;
+}
+.footer_nav_a a{
+	color: lightgrey;
+	text-decoration: none;
+	text-align: center;
+	font-size: 13px;
+}
+.footer_font p{
+	color: lightgrey;
+	text-align: center;
+	font-size: 14px;
+}
+.footer_font{
+	position: relative;
+	top: 15%;
+}
+div {
+    display: block;
+}
+.recharge .wing_side_content {
+    float: left;
+    width: 229px;
+}
+.mod_vip_intro {
+    position: relative;
+}
+
+.mod_vip_intro .vip_sign_gold, .mod_vip_intro .vip_sign_purple, .mod_vip_intro .vip_music_icon {
+    height: 120px;
+    font-size: 22px;
+    text-align: center;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    margin-bottom: 5px;
+}
+.mod_vip_intro .vip_music_icon {
+    height: 70px;
+    margin-bottom: -40px;
+}
+.mod_vip_intro .vip_music_icon span {
+    width: 49px;
+    height: 49px;
+    display: block;
+    float: left;
+    margin: 0 10px 0 35px;
+    background: url(../img/vip_ico_150327.png) no-repeat -503px -100px;
+}
+.mod_vip_intro .vip_music_icon p {
+    float: left;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    text-align: left;
+}
+.mod_vip_intro .vip_music_icon.vipMusic p strong {
+    width: 80px;
+    height: 25px;
+    background: url(../img/vip_ico_150327.png) no-repeat -555px -96px;
+}
+
+.mod_vip_intro .vip_music_icon p strong {
+    display: block;
+}
+.mod_vip_intro .vip_music_icon p em {
+    font-style: normal;
+    color: #848484;
+}
+.mod_vip_intro .vip_detail {
+    line-height: 24px;
+    margin-top: 40px;
+    padding: 16px 0 0 50px;
+    color: #666666;
+}
+.mod_vip_intro .vip_detail.svip p {
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+    color: #5e6781;
+    margin-bottom: 10px;
+}
+
+.mod_vip_intro .vip_detail.svip i {
+    background: url(../img/vip_ico_150327.png) no-repeat;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.mod_vip_intro .vip_detail.svip .icon_1 {
+	clear: right;
+    background-position: 0 -159px;
+}
+.mod_vip_intro .vip_detail.svip .icon_2 {
+    background-position: -27px -159px;
+}
+.mod_vip_intro .vip_detail.svip .icon_3 {
+    background-position: -50px -159px;
+}
+.mod_vip_intro .vip_detail.svip .icon_5 {
+    background-position: -102px -159px;
+}
+.mod_vip_intro .vip_detail.svip .icon_6 {
+    background-position: -128px -154px;
+}
+
+.wing_area {
+    width: 100%;
+}
+.recharge .wing_main_content {
+    margin: 0;
+    float: right;
+    padding-left: 28px;
+    width: 700px;
+}
+
+.recharge .recharge_area {
+    position: relative;
+}
+.recharge .recharge_name {
+    width: 680px;
+    height: 20px;
+    padding: 20px 0;
+    font-size: 14px;
+    margin-bottom: 24px;
+    display: block;
+    position: relative;
+    border-bottom: 1px dotted #B2B2B2;
+}
+.clearfix {
+    zoom: 1;
+}
+.wing_main {
+    float: left;
+    width: 100%;
+}
+.recharge .wing_side_content {
+	position: absolute;
+	left: 350px;
+    float: left;
+    width: 229px;
+}
+.wing_main_content{
+	position: absolute;
+	right: 100px;
+}
+.recharge_area p {
+    font-size: 14px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.user_style_title {
+    float: left;
+    margin-right: 15px;
+}
+.recharge .font_bold, .recharge .font_bold2 {
+    font-weight: bold;
+    font-size: 14px;
+    width: 85px;
+    display: inline-block;
+}
+.recharge_area p span {
+    position: relative;
+}
+
+.prodType{
+	display: block;
+	position: relative;
+	
+}
+
+.vipname{
+	display: block;
+	float: right;
+	position: relative;
+	left:-300px;
+
+}
+.vip_time{
+	float: left;
+	position: absolute;
+	top: 50px;
+	
+}
+
+.recharge_time input{
+	position: relative;
+	top: 30px;
+	left: 30px;
+	margin-right:50px;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	height: 100px;
+	width: 100px;
+	text-align: center;
+	
+}
+.recharge_time input:focus{
+	background-color: #38B48B;
+	outline: none;
+}
+.vip_cost{
+	float: left;
+	position: absolute;
+	top: 250px;
+}
+.vip_last{
+	float: left;
+	position: absolute;
+	top: 300px;
+}
+.recharge_platform{
+	float: left;
+	position: absolute;
+	top: 350px;
+}
+.recharge_platform input{
+	position: relative;
+	top: 50px;
+	left: 30px;
+	margin-right:50px;
+	background-color: white;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	height: 110px;
+	width: 110px;
+	background-image: url(../img/alipay.jpg) ;
+}
+.recharge_platform input:focus{
+	border: 1px solid #38B48B;
+}
+#highlight1{
+	color: red;
+}
