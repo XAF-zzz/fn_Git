@@ -3,5 +3,51 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kgc.feiniao.mapper.SingleMapper">
+    <select id="getBySltap" resultType="com.kgc.feiniao.beans.Single">
+        select slName,slid,sltap from single order by sltap desc limit 0,5;
+    </select>
+    <select id="getByNew" resultType="com.kgc.feiniao.beans.Single">
+        select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,a.apic,r.srname,r.srid
+        FROM singer r,single s,album a
+        where s.slaid = a.aid and s.slsrid = r.srid
+        <if test="srregion!= null and srregion !='null'">
+            and r.srregion = #{srregion}
+        </if>
+        ORDER BY a.atime desc ,s.sltap desc limit #{pageNo},9
+    </select>
 
+    <select id="gethotSingleList" resultType="com.kgc.feiniao.beans.Single">
+        select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srid
+        FROM singer r,single s
+        WHERE  s.slsrid = r.srid  ORDER BY s.sltap desc
+        LIMIT 0,3;
+    </select>
+
+    <select id="getNewSingleList" resultType="com.kgc.feiniao.beans.Single">
+       select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srid
+        FROM singer r,single s,album a
+        WHERE  s.slsrid = r.srid  and TIMESTAMPDIFF(MONTH,a.atime,now())  ORDER BY s.sltap desc
+        LIMIT 0,3;
+    </select>
+
+    <select id="getPopularSingleList" resultType="com.kgc.feiniao.beans.Single">
+      select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srid
+        FROM singer r,single s,album a
+        WHERE  s.slsrid = r.srid   ORDER BY s.sltap*r.srfan desc
+        LIMIT 0,3;
+    </select>
+
+    <select id="getEaSingleList" resultType="com.kgc.feiniao.beans.Single">
+      select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srid
+        FROM singer r,single s
+        WHERE  s.slsrid = r.srid and r.srregion='美国' ORDER BY s.sltap desc
+        LIMIT 0,3;
+    </select>
+
+    <select id="getKoreaSingleList" resultType="com.kgc.feiniao.beans.Single">
+      select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srid
+        FROM singer r,single s
+        WHERE  s.slsrid = r.srid and r.srregion='韩国' ORDER BY s.sltap desc
+        LIMIT 0,3;
+    </select>
 </mapper>

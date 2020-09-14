@@ -21,4 +21,12 @@ public class User {
     private Date uvipend;
     //用户头像路径
     private String upic;
+    //账户封禁开始时间
+    private Date ublockstart;
+    //账户封禁结束时间
+    private Date ublockend;
+    //账号
+    private String uaccount;
+    //手机号
+    private String uphone;
 }

@@ -18,4 +18,6 @@ public class Order {
     private Date ocreate;
     //费用
     private Double ocost;
+    // 订单状态：0：创建未支付，1：创建已支付
+    private Integer ostate;
 }

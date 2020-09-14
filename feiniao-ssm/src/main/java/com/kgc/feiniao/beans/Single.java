@@ -23,4 +23,8 @@ public class Single {
     private Long sltap;
     //歌曲路径
     private String slresource;
+    //专辑封面
+    private String apic;
+    //歌手名
+    private String srname;
 }

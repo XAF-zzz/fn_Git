@@ -1,3 +1,5 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,18 +26,18 @@
 		<div class="top_nav_kong">
 			
 		</div>
-        <h1 class="music_title"><a href="#"><img  src="./img/0a4cbc0f9f55ecbfc036ad1ef2e7714.png" alt="飞鸟音乐" class="music_logo"/></a></h1>
+        <h1 class="music_title"><a href="toMain"><img  src="./img/0a4cbc0f9f55ecbfc036ad1ef2e7714.png" alt="飞鸟音乐" class="music_logo"/></a></h1>
         <!-- 导航 S -->
         <ul class="mod_top_nav" role="nav">
             <li class="top_nav__item">
-                <a href="main.jsp" class="top_nav__link top_nav__link--current" title="首页">首&nbsp;&nbsp;页</a>
+                <a href="toMain" class="top_nav__link top_nav__link--current" title="首页">首&nbsp;&nbsp;页</a>
             </li>
             <li class="top_nav__item">
-                <a href="singer.jsp" class="top_nav__link" title="歌手">歌&nbsp;&nbsp;手</a>
+                <a href="toSinger" class="top_nav__link" title="歌手">歌&nbsp;&nbsp;手</a>
             </li>
            
 	    <li class="top_nav__item">
-	        <a href="#" data-stat="y_new.top.artists" class="top_nav__link js_nav_click" title="榜单" rel="noopener" target="_blank">榜&nbsp;&nbsp;单</a>
+	        <a href="toList" data-stat="y_new.top.artists" class="top_nav__link js_nav_click" title="榜单" rel="noopener" target="_blank">榜&nbsp;&nbsp;单</a>
 	    </li>
         </ul>
         <!-- 导航 E -->
@@ -54,16 +56,12 @@
 	   <!-- 头部搜索框 -->
 	   <div class="top_nav_search">
 	   	<ul class="top_nav_search_t">
-	   		<li><span class="top_nav_span_l">1&nbsp;&nbsp;&nbsp;</span>我们的歌<span class="top_nav_span_r">0.00万</span></li>
-			<li><span class="top_nav_span_l">2&nbsp;&nbsp;&nbsp;</span>冰雪奇缘2 <span class="top_nav_span_r"></span></li>
-			<li><span class="top_nav_span_l">3&nbsp;&nbsp;&nbsp;</span>张杰<span class="top_nav_span_r"></span></li>
-			<li><span class="top_nav_span_l">4&nbsp;&nbsp;&nbsp;</span>桥边姑娘<span class="top_nav_span_r"></span></li>
-			<li><span class="top_nav_span_l">5&nbsp;&nbsp;&nbsp;</span>星辰大海<span class="top_nav_span_r"></span></li>
+			<c:forEach items="${searchTop5}" var="sear" varStatus="co">
+				<li><span class="top_nav_span_l">${co.count}&nbsp;&nbsp;&nbsp;</span ><span class="top_nav_span_n"><a href="" style="text-decoration: none;color:black;">${sear.slname}</a></span><span class="top_nav_span_r">${sear.sltap}</span></li>
+			</c:forEach>
+
+
 	   	</ul>
-		<p class="top_nav_search_p"><span>搜索历史</span><input type="button" class="delete_all_search"/></p>
-		<ul class="top_nav_search_b">
-			<li>张杰 <input type="button" class="delete_this_search" /></li>	
-		</ul>
 	   </div>
            
     </div>
@@ -78,104 +76,34 @@
 	            <!-- 切换 -->
 	            <div class="mod_index_tab">
 			
-			    <a href="javascript:;" class="index_tab__item index_tab__item--current js_tag">最新</a>
+			    <a href="newSingle?srregion=null" class="index_tab__item index_tab__item--current js_tag">最新</a>
 			
-			    <a href="javascript:;" class="index_tab__item js_tag">内地</a>
+			    <a href="newSingle?srregion=内地" class="index_tab__item js_tag">内地</a>
 			
-			    <a href="javascript:;" class="index_tab__item js_tag">港台</a>
+			    <a href="newSingle?srregion=港台" class="index_tab__item js_tag">港台</a>
 			
-			    <a href="javascript:;" class="index_tab__item js_tag">欧美</a>
+			    <a href="newSingle?srregion=欧美" class="index_tab__item js_tag">欧美</a>
 			
-			    <a href="javascript:;" class="index_tab__item js_tag" >韩国</a>
+			    <a href="newSingle?srregion=韩国" class="index_tab__item js_tag" >韩国</a>
 			
-			    <a href="javascript:;" class="index_tab__item js_tag" >日本</a>
+			    <a href="newSingle?srregion=日本" class="index_tab__item js_tag" >日本</a>
 			
 	            </div>
 				<div class="mod_songlist_fat">
 					<div class="mod_songlist mod_slide">
 					    <div class="slide__list js_list" style="left:0%;">
 							<ul class="new_songlist_page">
+								<c:forEach items="${newSingle1}" var="new1">
 								<li class="new_songlist_song">
 									<div class="new_songlist_box">
 										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1测试歌曲1测试歌曲1测试歌曲1测试歌曲1测试歌曲1测试歌曲1测试歌曲1测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
+										<a href="play.jsp" class="new_songlist_asong">${new1.slname}</a>
+										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new1.srname}</a>
+										<span>${new1.sltime}</span>
 										<div class="new_songlist_play"></div>
 									</div>
 								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song ">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">测试歌曲1</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
+								</c:forEach>
 							</ul>
 					 
 					    </div>
@@ -184,87 +112,18 @@
 					<div class="mod_songlist mod_slide">
 					    <div class="slide__list js_list" style="left:0%;">
 							<ul class="new_songlist_page">
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song ">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲2</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手2</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ2.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲2</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手2</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
+								<c:forEach items="${newSingle2}" var="new2">
+									<li class="new_songlist_song">
+										<div class="new_songlist_box">
+											<img src="./img/gequ1.jpg" >
+											<a href="play.jsp" class="new_songlist_asong">${new2.slname}</a>
+											<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new2.srname}</a>
+											<span>${new2.sltime}</span>
+											<div class="new_songlist_play"></div>
+										</div>
+									</li>
+								</c:forEach>
+
 							</ul>
 					 
 					    </div>
@@ -273,87 +132,17 @@
 					<div class="mod_songlist mod_slide">
 					    <div class="slide__list js_list" style="left:0%;">
 							<ul class="new_songlist_page">
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song ">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲1</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手1</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲2</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手2</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
-								<li class="new_songlist_song new_songlist_song3">
-									<div class="new_songlist_box">
-										<img src="./img/gequ3.jpg" >
-										<a href="#" class="new_songlist_asong">测试歌曲2</a>
-										<a href="#" class="new_songlist_asinger" style="color: #999999;">歌手2</a>
-										<span>02：40</span>
-										<div class="new_songlist_play"></div>
-									</div>
-								</li>
+								<c:forEach items="${newSingle3}" var="new3">
+									<li class="new_songlist_song">
+										<div class="new_songlist_box">
+											<img src="./img/gequ1.jpg" >
+											<a href="play.jsp" class="new_songlist_asong">${new3.slname}</a>
+											<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new3.srname}</a>
+											<span>${new3.sltime}</span>
+											<div class="new_songlist_play"></div>
+										</div>
+									</li>
+								</c:forEach>
 							</ul>
 					 
 					    </div>
@@ -373,7 +162,7 @@
 					<div class="yema_a_smallbox">
 						
 						<a href="javascript:;"></a>
-						<a href="javascript:;"></a>
+						<a href="javascript:;pageNo=2"></a>
 						<a href="javascript:;"></a>
 
 					</div>
@@ -429,7 +218,7 @@
 		<!-- 排行榜 -->
 		<div class="mod_top_list_div">
 			<h2 class="pro_recom_title">排&nbsp;&nbsp;行&nbsp;&nbsp;榜</h2>
-			<a href="#" class="list_more">更多>></a>
+			<a href="toList" class="list_more">更多>></a>
 			<div class="mod_toplist">
 				<ul class="toplist__list js_list">
 					<li class="toplist_item item1 mod_cover">
@@ -438,9 +227,9 @@
 							<i></i>
 						</div>
 						<ul class="mod_toplist_content">
-							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">1</span><a href="#">爱，存在</a><br><a href="#">王靖雯不胖</a></li>
-							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">2</span><a href="#">晴天</a><br><a href="#">周杰伦</a></li>
-							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">3</span><a href="#">无人之岛</a><br><a href="#">任然</a></li>
+							<c:forEach items="${hotSingle}" var="hot" varStatus="count">
+							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+							</c:forEach>
 						</ul>
 						</li>
 					<li class="toplist_item item2 mod_cover">
@@ -448,24 +237,44 @@
 						<div class="mod_cover_icon_play">
 							<i></i>
 						</div>
+						<ul class="mod_toplist_content">
+							<c:forEach items="${newSingleList}" var="hot" varStatus="count">
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+							</c:forEach>
+						</ul>
 						</li>
 					<li class="toplist_item item3 mod_cover">
 						<span>巅&nbsp;峰&nbsp;榜</span><br><strong>流行指数</strong>
 						<div class="mod_cover_icon_play">
 							<i></i>
 						</div>
+						<ul class="mod_toplist_content">
+							<c:forEach items="${popularSingleList}" var="hot" varStatus="count">
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+							</c:forEach>
+						</ul>
 						</li>
 					<li class="toplist_item item4 mod_cover">
 						<span>巅&nbsp;峰&nbsp;榜</span><br><strong>欧美</strong>
 						<div class="mod_cover_icon_play">
 							<i></i>
 						</div>
+						<ul class="mod_toplist_content">
+							<c:forEach items="${eaSingleList}" var="hot" varStatus="count">
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+							</c:forEach>
+						</ul>
 						</li>
 					<li class="toplist_item item5 mod_cover">
 						<span>巅&nbsp;峰&nbsp;榜</span><br><strong>韩国</strong>
 					<div class="mod_cover_icon_play">
 						<i></i>
 					</div>
+						<ul class="mod_toplist_content">
+							<c:forEach items="${koreaSingleList}" var="korea" varStatus="count">
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${korea.slname}</a><br><a href="#">${korea.srname}</a></li>
+							</c:forEach>
+						</ul>
 					</li>
 				</ul>
 			</div>
@@ -506,7 +315,41 @@
 		$(function(){
 			$(".search_input__btn").click(function(){
 				location.href="search.jsp"
-			})		
+			})
+			$(".index_tab__item").click(function () {
+				var srregion = $(this).attr("href");
+
+				$.ajax({
+					"url":srregion,
+					"type":"post",
+					"data":{},
+					"dataType":"json",
+					"success":function (data) {
+
+						$(".new_songlist_page").empty();
+						for(var i=0;i<data.length;i++){
+							var temp = data[i];
+							var str1 = "";
+							for (var j = 0;j<temp.length;j++){
+
+								str1 += "<li class='new_songlist_song'>"+
+										"<div class='new_songlist_box'>"+
+										"<img src='./img/gequ1.jpg' >"+
+										"<a href='play.jsp' class='new_songlist_asong'>"+temp[j].slname+"</a>"+
+										"<a href='play.jsp' class='new_songlist_asinger' style='color: #999999;'>"+temp[j].srname+"</a>"+
+										"<span>"+temp[j].sltime+"</span>"+
+										"<div class='new_songlist_play'></div>"+
+										"</div>"+
+										"</li>"
+									}
+
+								$(".new_songlist_page").eq(i).append(str1);
+								}
+
+					}
+				});
+				return false;
+			})
 		})
 	</script>
 </html>
