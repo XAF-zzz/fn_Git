@@ -23,6 +23,8 @@ public class RechargeController {
 
     @RequestMapping(value = "alipay",produces = "text/html; charset=UTF-8")
     public String alipay(HttpServletRequest request, HttpServletResponse response,Integer charNum) throws Exception{
+        System.out.println("-----------------------");
+        System.out.println(charNum.toString());
         String total_amount = charNum.toString();
         String out_trade_no = "1";
         String subject = "order";

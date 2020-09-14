@@ -113,8 +113,7 @@
 											<form>
 											<div class="recharge_platform">
 												<span>支付平台：
-												<input type="button" style="background-image: url(${pageContext.request.contextPath}/img/alipay.jpg) ;background-size: 100px 100px; border: none;" />
-												<input type="button" value="sub" id="finsih"/>
+												<input type="button" id="finsih" style="background-image: url(${pageContext.request.contextPath}/img/alipay.jpg) ;background-size: 100px 100px; border: none;" />
 												</span>
 											</div>
 											</form>
