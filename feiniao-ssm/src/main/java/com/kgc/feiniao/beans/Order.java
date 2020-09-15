@@ -18,6 +18,10 @@ public class Order {
     private Date ocreate;
     //费用
     private Double ocost;
+<<<<<<< .merge_file_a68540
     // 订单状态：0：创建未支付，1：创建已支付
+=======
+    //订单状态（0：创建未支付，1：创建已支付）
+>>>>>>> .merge_file_a35972
     private Integer ostate;
 }
