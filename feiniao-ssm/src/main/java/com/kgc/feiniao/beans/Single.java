@@ -27,4 +27,8 @@ public class Single {
     private String apic;
     //歌手名
     private String srname;
+    //发行事件
+    private String atime;
+    //风格
+    private String srstyle;
 }

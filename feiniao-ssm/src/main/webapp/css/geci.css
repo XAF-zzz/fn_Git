@@ -1,0 +1,218 @@
+.fengmian{
+	width: 250px;
+	height: 250px;
+	padding: 0px;
+	margin: 0px;
+}
+.zhuanjiming{
+	margin: 0;
+	margin-top: 20px;
+	
+}
+.singer_name{
+	color: dimgray;
+	margin-top: 20px;
+	font-size: 15px;
+}
+.zhuanji_all_play{
+	width: 20px;
+	height: 20px;
+}
+.zhuanji_all_play_btn{
+	background-color: #38B48B;
+	color: white;
+	font-weight: 100;
+	font-size: 15px;
+	width: 130px;
+	border-radius: 0;
+}
+.zhuanji_like{
+	font-weight: 400;
+	font-size: 15px;
+	width: 130px;
+	border-radius: 0;
+	background-color: #fcfcfc;
+}
+.zhuanji_talk{
+	font-weight: 400;
+	font-size: 15px;
+	width: 130px;
+	border-radius: 0;
+	background-color: #fcfcfc;
+}	
+.zhuan_btn{
+	margin-top: 30px;
+}
+.fengge_name,.faxing_time{
+	color: dimgray;
+	margin-top: 10px;
+	font-size: 15px;
+}
+section{
+	width: 100%;
+	background-image: linear-gradient(#F1F1F1, #FfFfFf);
+}
+
+/* 专辑歌曲表 */
+.geci_list{
+	position: relative;
+	left: 60px;
+	margin-top: 30px;
+
+}
+.zksq{
+	position: relative;
+	left: 60px;
+	cursor: pointer;
+	margin-bottom: 50px;
+}
+
+
+
+/*评论框*/
+
+.commentguest{
+	width: 2em;
+	height: 2em;
+	top: 2.2em;
+	position: relative;
+}
+.commentguest img{
+	width:100%;
+	height: auto;
+}
+.comment-input{
+        transition: all 0.5s ease 0s;
+        font-family: "微软雅黑";
+        font-size: 1.1em;
+        position: relative;
+        left: 3.1em;
+}
+.commentarea{
+	position:absolute; 
+	padding: 0.6em 1em;
+	border: 0.1em solid black;
+	background: #fff none repeat scroll 0 0;
+	width:42em;
+	height: 11.37em;
+	z-index: 2; 
+}
+.commentarea textarea{
+	border: 0 none;
+    display: block;
+    outline: 0 none;
+    resize: none;
+    width:40em;
+     height:7em;
+    
+}
+.comment-input:hover .commentarea{
+	height: 11.37em;
+}
+.comment-input:hover .commentarea textarea{
+    height:7em;
+}
+.comment-input:hover .commentbtn{
+	top:6em;
+	z-index: 3;
+}
+.commentbtn{
+	border: 0 none;
+    bottom: 2em;
+    height: 3.3em;
+    padding: 0;
+    left: 0.1em;
+    width:33.9em;
+    position: relative;
+    transition:top 0.1s ease 0s;
+	top:6em;
+	z-index: 3;
+ 
+}
+.commentmask{
+    border: 0 none;
+    top:2em;
+    height: 100%;
+    padding: 0;
+    right: 0;
+    width:41.8em;
+    background-color: #f4f5f6;
+    position: relative;
+    z-index: 1;
+}
+.getcomment{
+	width:6em;
+	float: right;
+	bottom: 1.2em;
+	position: relative;
+	left: 7.13em;
+	width:6.7em;
+	height: 100%;
+	z-index:3;
+	background-color:#3f404c;
+	color: #fff;
+	line-height: 1.9em;
+	text-align: center;
+	font-size: 1.1em;
+}
+.getcomment:hover{
+	background-color: #AC2925;
+	color: #fff;
+}
+
+/* 评论详情 */
+.comm{
+	position: relative;
+	bottom: -10em;
+	left: 45px;
+	font-size: 16px;
+}
+.comment_count{
+	font-size: 16px;
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 10px;
+}
+.comment_fa{
+	padding-top: 15px;
+	padding-bottom:20px ;
+	border-bottom:1px solid lightgray ;
+}
+.comment_pic{
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+.comment_name{
+	color: #999999;
+}
+.comment_content{
+	padding-top: 8px;
+	font-size: 15px;
+	line-height: 25px;
+}
+.comment_time{
+	padding-top: 15px;
+	color: #999;
+	font-size: 14px;
+	font-weight: 200;
+}
+.zan{
+	display: inline-block;
+	font-size: 20px;
+	color: #333;
+	cursor: pointer;
+	
+	text-decoration: none;
+}
+.zan_fa{
+	position: relative;
+	top: 10px;
+	padding-right: 40px;
+}
+
+/*歌词展开收起控制*/
+.lyrics{
+
+	 height: 500px;
+	 overflow-y: hidden;
+ }

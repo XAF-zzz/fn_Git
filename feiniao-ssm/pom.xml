@@ -94,7 +94,6 @@
     </dependency>
 
 
-
     <!-- Logger -->
     <dependency>
       <groupId>org.slf4j</groupId>
@@ -126,6 +125,22 @@
       <artifactId>janino</artifactId>
       <version>2.6.1</version>
     </dependency>
+
+    <dependency>
+      <groupId>joinery</groupId>
+      <artifactId>jave</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org/jaudiotagger -->
+    <dependency>
+      <groupId>org</groupId>
+      <artifactId>jaudiotagger</artifactId>
+      <version>2.0.3</version>
+    </dependency>
+
+
+
 
     <!-- Servlet -->
     <dependency>

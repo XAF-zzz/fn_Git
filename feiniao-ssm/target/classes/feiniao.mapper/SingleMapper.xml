@@ -50,4 +50,10 @@
         WHERE  s.slsrid = r.srid and r.srregion='韩国' ORDER BY s.sltap desc
         LIMIT 0,3;
     </select>
+
+    <select id="getBySlid" resultType="com.kgc.feiniao.beans.Single">
+     select s.slid,s.slsrid,s.slname,s.slaid,s.sltime,s.sllrc,s.sltap,s.slresource,r.srname,r.srstyle,a.atime
+        FROM singer r,single s,album a
+        where s.slsrid = r.srid and s.slaid = a.aid and s.slid = #{slid}
+    </select>
 </mapper>

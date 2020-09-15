@@ -21,4 +21,6 @@ public interface SingleMapper {
     List<Single> getEaSingleList();
 
     List<Single> getKoreaSingleList();
+
+    Single getBySlid(Integer slid);
 }

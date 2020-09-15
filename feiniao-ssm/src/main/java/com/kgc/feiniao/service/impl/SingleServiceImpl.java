@@ -50,4 +50,9 @@ public class SingleServiceImpl implements SingleService {
     public List<Single> queryKoreaSingleList() {
         return singleMapper.getKoreaSingleList();
     }
+
+    @Override
+    public Single queryBySlid(Integer slid) {
+        return singleMapper.getBySlid(slid);
+    }
 }

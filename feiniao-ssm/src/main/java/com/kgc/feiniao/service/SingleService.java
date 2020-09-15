@@ -62,4 +62,13 @@ public interface SingleService {
      * @Description: 查询韩国榜前三条数据
      */
     List<Single> queryKoreaSingleList();
+
+    /**
+     * @Author: zxf
+     * @Params: Integer slid
+     * @Return: Single
+     * @Date: 2020-09-15
+     * @Description: 根据歌曲id查询相应的歌曲
+     */
+    Single queryBySlid(Integer slid);
 }

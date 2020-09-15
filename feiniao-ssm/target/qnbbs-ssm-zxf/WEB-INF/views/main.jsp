@@ -30,14 +30,14 @@
         <!-- 导航 S -->
         <ul class="mod_top_nav" role="nav">
             <li class="top_nav__item">
-                <a href="main.jsp" class="top_nav__link top_nav__link--current" title="首页">首&nbsp;&nbsp;页</a>
+                <a href="toMain" class="top_nav__link top_nav__link--current" title="首页">首&nbsp;&nbsp;页</a>
             </li>
             <li class="top_nav__item">
-                <a href="singer.jsp" class="top_nav__link" title="歌手">歌&nbsp;&nbsp;手</a>
+                <a href="toSinger" class="top_nav__link" title="歌手">歌&nbsp;&nbsp;手</a>
             </li>
            
 	    <li class="top_nav__item">
-	        <a href="#" data-stat="y_new.top.artists" class="top_nav__link js_nav_click" title="榜单" rel="noopener" target="_blank">榜&nbsp;&nbsp;单</a>
+	        <a href="toList" data-stat="y_new.top.artists" class="top_nav__link js_nav_click" title="榜单" rel="noopener" target="_blank">榜&nbsp;&nbsp;单</a>
 	    </li>
         </ul>
         <!-- 导航 E -->
@@ -95,10 +95,10 @@
 							<ul class="new_songlist_page">
 								<c:forEach items="${newSingle1}" var="new1">
 								<li class="new_songlist_song">
-									<div class="new_songlist_box">
-										<img src="./img/gequ1.jpg" >
-										<a href="play.jsp" class="new_songlist_asong">${new1.slname}</a>
-										<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new1.srname}</a>
+									<div class="new_songlist_box" >
+										<img src="./img/gequ1.jpg" onclick="window.location.href='toPlay?slid=${new1.slid}'">
+										<a href="toSong?slid=${new1.slid}" class="new_songlist_asong"  target="_Blank">${new1.slname}</a>
+										<a href="" class="new_songlist_asinger" style="color: #999999;"  target="_Blank">${new1.srname}</a>
 										<span>${new1.sltime}</span>
 										<div class="new_songlist_play"></div>
 									</div>
@@ -115,9 +115,9 @@
 								<c:forEach items="${newSingle2}" var="new2">
 									<li class="new_songlist_song">
 										<div class="new_songlist_box">
-											<img src="./img/gequ1.jpg" >
-											<a href="play.jsp" class="new_songlist_asong">${new2.slname}</a>
-											<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new2.srname}</a>
+											<img src="./img/gequ1.jpg" onclick="window.location.href='toPlay?slid=${new3.slid}'">
+											<a href="toSong?slid=${new2.slid}" class="new_songlist_asong"  target="_Blank">${new2.slname}</a>
+											<a href="" class="new_songlist_asinger" style="color: #999999;"  target="_Blank">${new2.srname}</a>
 											<span>${new2.sltime}</span>
 											<div class="new_songlist_play"></div>
 										</div>
@@ -135,9 +135,9 @@
 								<c:forEach items="${newSingle3}" var="new3">
 									<li class="new_songlist_song">
 										<div class="new_songlist_box">
-											<img src="./img/gequ1.jpg" >
-											<a href="play.jsp" class="new_songlist_asong">${new3.slname}</a>
-											<a href="play.jsp" class="new_songlist_asinger" style="color: #999999;">${new3.srname}</a>
+											<img src="./img/gequ1.jpg" onclick="window.location.href='toPlay?slid=${new3.slid}'">
+											<a href="toSong?slid=${new3.slid}" class="new_songlist_asong"  target="_Blank">${new3.slname}</a>
+											<a href="" class="new_songlist_asinger" style="color: #999999;"  target="_Blank">${new3.srname}</a>
 											<span>${new3.sltime}</span>
 											<div class="new_songlist_play"></div>
 										</div>
@@ -218,7 +218,7 @@
 		<!-- 排行榜 -->
 		<div class="mod_top_list_div">
 			<h2 class="pro_recom_title">排&nbsp;&nbsp;行&nbsp;&nbsp;榜</h2>
-			<a href="#" class="list_more">更多>></a>
+			<a href="toList" class="list_more">更多>></a>
 			<div class="mod_toplist">
 				<ul class="toplist__list js_list">
 					<li class="toplist_item item1 mod_cover">
@@ -228,7 +228,7 @@
 						</div>
 						<ul class="mod_toplist_content">
 							<c:forEach items="${hotSingle}" var="hot" varStatus="count">
-							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+							<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="toPlay?slid=${hot.slid}">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
 							</c:forEach>
 						</ul>
 						</li>
@@ -239,7 +239,7 @@
 						</div>
 						<ul class="mod_toplist_content">
 							<c:forEach items="${newSingleList}" var="hot" varStatus="count">
-								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="toPlay?slid=${hot.slid}">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
 							</c:forEach>
 						</ul>
 						</li>
@@ -250,7 +250,7 @@
 						</div>
 						<ul class="mod_toplist_content">
 							<c:forEach items="${popularSingleList}" var="hot" varStatus="count">
-								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="toPlay?slid=${hot.slid}">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
 							</c:forEach>
 						</ul>
 						</li>
@@ -261,7 +261,7 @@
 						</div>
 						<ul class="mod_toplist_content">
 							<c:forEach items="${eaSingleList}" var="hot" varStatus="count">
-								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="toPlay?slid=${hot.slid}">${hot.slname}</a><br><a href="#">${hot.srname}</a></li>
 							</c:forEach>
 						</ul>
 						</li>
@@ -272,7 +272,7 @@
 					</div>
 						<ul class="mod_toplist_content">
 							<c:forEach items="${koreaSingleList}" var="korea" varStatus="count">
-								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="#">${korea.slname}</a><br><a href="#">${korea.srname}</a></li>
+								<li><span class="mod_toplist_content_xuhao" style="font-size: 15px; position: absolute; top: 2px; right: 195px;">${count.count}</span><a href="toPlay?slid=${korea.slid}">${korea.slname}</a><br><a href="#">${korea.srname}</a></li>
 							</c:forEach>
 						</ul>
 					</li>
