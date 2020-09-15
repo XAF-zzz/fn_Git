@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kgc.feiniao.mapper.UserMapper">
+
+    <select id="getUser" resultType="com.kgc.feiniao.beans.User">
+        select uid, uaccount , upassword,uaccount,upassword,uphone,utype,uvipstart,uvipend,upic,ublockstart,ublockend
+        from user
+        where uaccount = #{user.uaccount}
+        and upassword = #{user.upassword}
+    </select>
+
+    <insert id="createUser">
+        insert into user(uname,uaccount,upassword,uphone)
+        values (#{user.uname},#{user.uaccount},#{user.upassword},#{user.uphone})
+    </insert>
+</mapper>

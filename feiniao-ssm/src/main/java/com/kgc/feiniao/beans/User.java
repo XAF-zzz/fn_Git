@@ -13,6 +13,12 @@ public class User {
     private Integer uid;
     //用户名
     private String uname;
+    //用户账号
+    private String uaccount;
+    //用户密码
+    private String upassword;
+    //用户手机号
+    private String uphone;
     //用户类型
     private Integer utype;
     //用户VIP开通时间
@@ -21,4 +27,8 @@ public class User {
     private Date uvipend;
     //用户头像路径
     private String upic;
+    //封号开始时间
+    private Date ublockstart;
+    //封号结束时间
+    private Date ublockend;
 }

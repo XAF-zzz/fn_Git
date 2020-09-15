@@ -11,6 +11,8 @@ public class Single {
     private Integer slid;
     //歌手id
     private Integer slsrid;
+    //歌手名
+    private String srname;
     //歌曲名
     private String slname;
     //专辑id

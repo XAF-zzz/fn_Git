@@ -1,0 +1,142 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+input{
+	outline: none;
+	border: none;
+}
+.f_r{
+	float: right;
+}
+.f_l{
+	float: left;
+}
+.clear{
+	display: block;
+	content: '';
+	clear: both;
+}
+.tou{
+	width: 400px;
+	height: 60px;
+	margin: 10px 0 20px 300px;
+}
+.tou div{
+	width: 100px;
+	height: 40px;
+	line-height:40px ;
+	position: relative;
+	top: 12px;
+	left: 150px;
+}
+.ceshi{
+	margin:0;
+}
+.tou>img{
+	width: 100px;
+	height: 40px;
+	position: relative;
+	top: 9px;
+	left: 110px;
+}
+
+.sect{
+	width: 500px;
+	margin: 0 auto;
+}
+h2{
+	font-size: 40px;
+	font-weight: 500;
+}
+h4{
+	font-size: 25px;
+	font-weight: 300;
+	
+}
+
+form{
+	margin-top: 30px;
+	color: #AAAAAA;
+}
+.longBd{
+	width:500px ;
+	height: 60px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+}
+.middleBd{
+	width:300px ;
+	height: 60px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+}
+.shortBd{
+	width:180px ;
+	height: 60px;
+	border: 1px solid #AAAAAA;
+	border-radius: 5px;
+}
+.phone{
+	width: 500px;
+	height: 60px;
+}
+.phone>select>option{
+	font-size: 15px;
+	font-weight: bold;
+	text-indent: 5px;
+}
+
+.words{
+	width: 500px;
+	height: 60px;
+	display: none;
+}
+.a{
+	height: 30px;
+	margin: 15px 10px;
+	font-size: 20px;
+	outline: none;
+}
+.b{
+	height: 30px;
+	width:150px ;
+	margin: 15px 10px;
+	font-size: 20px;
+	
+}
+.c{
+	margin-top: 30px;
+}
+.zc,.hyzm{
+	font-size: 25px;
+	font-weight: 300;
+	background-color: #3688FF;
+	color: white;
+}
+.fw{
+	/* border: 1px solid red; */
+	font-size: 12px;
+}
+#aside{
+	width: 33%;
+	height:100%;
+}
+#aside img{
+	width: 420px;
+	height: 656px;
+	position: fixed;
+}
+article{
+	width: 60%;
+	height: 100%;
+}
+.ban{
+	height: 20px;
+	width: auto;
+	font-size: 10px;
+	line-height: 20px;
+	margin: 70px 0 35px 40px;
+	text-indent: 15px;
+}
